@@ -1,10 +1,10 @@
 # Import python packages
 import streamlit as st
-#conn = st.connection("snowflake")
+# Setup Session for Streamlit Cloud
+#from snowflake.snowpark.context import get_active_session
 cnx = st.connection("snowflake")
 session = cnx.session()
-# Setup Session
-#from snowflake.snowpark.context import get_active_session
+
 
 
 # Write directly to the app
