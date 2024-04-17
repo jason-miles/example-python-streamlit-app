@@ -18,7 +18,7 @@ st.write(
 )
 
 # Get the current credentials
-session = get_active_session()
+# session = get_active_session()
 
 # Use an interactive slider to get user input
 hifives_val = st.slider(
