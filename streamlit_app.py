@@ -1,8 +1,10 @@
 # Import python packages
 import streamlit as st
-#from snowflake.snowpark.context import get_active_session
 cnx = st.connection("snowflake")
 session = cnx.session()
+# Setup Session
+#from snowflake.snowpark.context import get_active_session
+
 
 # Write directly to the app
 st.title("Example Streamlit App :balloon:")
@@ -41,6 +43,3 @@ queried_data = created_dataframe.to_pandas()
 # See docs.streamlit.io for more types of charts
 st.subheader("Number of high-fives")
 st.bar_chart(data=queried_data, x="QUARTER", y="HIGH_FIVES")
-
-st.subheader("Underlying data")
-st.dataframe(queried_data, use_container_width=True)
